@@ -10,7 +10,6 @@ export default function NavFooterWrapper() {
   const [fufilledNavOffset, setFufilledNavOffset] = useState(10);
 
   useEffect(() => {
-    console.log(fufilledNavOffset);
     if (fufilledNavOffset < 0) {
       console.log("OUT");
       setShowNav(false);

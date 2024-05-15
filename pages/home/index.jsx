@@ -1,13 +1,14 @@
-import { useState } from "react";
-
 import "./index.css";
+import setPageTitle from "../assets/hooks/setPageTitle";
+import Slideshow from "./slideShow/slideShowConstructor";
+import { slides } from "./slideShow/slides";
 
 function App() {
-  const [count, setCount] = useState(0);
+  setPageTitle("Blitz Wallet | Bitcoin Lightning and Liquid Wallet");
 
   return (
-    <div className="screen">
-      <h1>Blitz</h1>
+    <div className="homepage">
+      <Slideshow slides={slides} />
     </div>
   );
 }

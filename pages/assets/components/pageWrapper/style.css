@@ -13,13 +13,14 @@ nav {
   align-items: center;
   margin: 0 auto;
 
-  background-color: #fffcf5d6;
+  background-color: #fafafadc;
 
   backdrop-filter: blur(5px);
 
   position: fixed;
   top: 0;
   transition: top 0.5s ease;
+  z-index: 99;
 }
 
 nav .navContent {
