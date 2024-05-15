@@ -1,14 +1,50 @@
 import { Outlet, Link } from "react-router-dom";
 
 import "./style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DesktopNav from "./components/desktopNav";
 import MobileNav from "./components/mobileNav";
 
 export default function NavFooterWrapper() {
+  const [showNav, setShowNav] = useState(true);
+  const [fufilledNavOffset, setFufilledNavOffset] = useState(10);
+
+  useEffect(() => {
+    console.log(fufilledNavOffset);
+    if (fufilledNavOffset < 0) {
+      console.log("OUT");
+      setShowNav(false);
+    } else if (fufilledNavOffset > 10) {
+      console.log("IN");
+      setShowNav(true);
+    }
+  }, [fufilledNavOffset]);
+
+  useEffect(() => {
+    let prevScroll = 0;
+    function listenForScroll(e) {
+      setFufilledNavOffset((prev) => {
+        if (prevScroll < window.scrollY) {
+          prevScroll = window.scrollY;
+          if (prev < 0) return prev;
+          return (prev -= 1);
+        } else {
+          prevScroll = window.scrollY;
+          if (prev > 10) return prev;
+          return (prev += 1);
+        }
+      });
+    }
+
+    window.addEventListener("scroll", listenForScroll);
+
+    return () => {
+      window.removeEventListener(listenForScroll);
+    };
+  }, []);
   return (
     <>
-      <nav>
+      <nav style={{ top: showNav ? 0 : -60 }}>
         <div className="navContent">
           <img
             alt="blitz wallet full text logo"
@@ -19,13 +55,14 @@ export default function NavFooterWrapper() {
           {/* <MobileNav /> */}
         </div>
       </nav>
-
-      <Outlet />
+      <div className="container">
+        <Outlet />
+      </div>
 
       {/* <footer>
         <div className="content">
           <div className="privcyContent">
-            <p>@2023 Blitz Wallet LLC.</p>
+            <p>@1023 Blitz Wallet LLC.</p>
             <div>
               <a href="./pages/privacyPolicy/">
                 <p>Privacy Policy</p>

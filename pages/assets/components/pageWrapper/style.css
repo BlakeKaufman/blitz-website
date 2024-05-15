@@ -1,3 +1,7 @@
+.container {
+  padding-top: 60px;
+}
+
 /* --------------------------------- */
 /* NavBar */
 /* --------------------------------- */
@@ -8,7 +12,16 @@ nav {
   display: flex;
   align-items: center;
   margin: 0 auto;
+
+  background-color: #fffcf5d6;
+
+  backdrop-filter: blur(5px);
+
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease;
 }
+
 nav .navContent {
   width: 95%;
   max-width: 1100px;
@@ -44,7 +57,7 @@ nav .desktop .navItems {
 
   /* justify-content: space-between; */
 }
-nav .desktop .navItem {
+nav .desktop .navItem a {
   font-size: 16px;
   margin: 0 20px;
   cursor: pointer;
@@ -55,6 +68,14 @@ nav .desktop .navItem {
 
 nav .desktop .navItems a {
   text-decoration: none;
+}
+
+nav .desktop .navItems:hover .navItem {
+  opacity: 0.7;
+}
+
+nav .desktop .navItems .navItem:hover {
+  opacity: 1;
 }
 
 nav .mobile img {
