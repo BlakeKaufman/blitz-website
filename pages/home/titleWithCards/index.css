@@ -1,0 +1,12 @@
+.titleWithCards {
+  width: 100%;
+  /* max-width: 1500px; */
+  /* margin-left: auto; */
+}
+.titleWithCards h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 20px;
+
+  margin-left: 10%;
+}

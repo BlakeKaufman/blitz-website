@@ -5,6 +5,7 @@
 
   overflow: hidden;
   touch-action: none;
+  margin-bottom: 20px;
 }
 
 .slideshow-container::-webkit-scrollbar {
@@ -45,7 +46,7 @@
   top: 0;
 
   /* background-color: green; */
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
 
   display: flex;
   flex-direction: column;
