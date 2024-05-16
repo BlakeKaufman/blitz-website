@@ -24,7 +24,7 @@ nav {
 }
 
 nav .navContent {
-  width: 95%;
+  width: 90%;
   max-width: 1100px;
   height: 100%;
   display: flex;
@@ -261,10 +261,6 @@ footer .navItems {
   }
 }
 @media screen and (max-width: 600px) {
-  nav .logo {
-    width: 230px;
-  }
-
   footer .navItems {
     height: 250px;
     flex-direction: column;
