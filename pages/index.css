@@ -206,3 +206,8 @@
   overflow-x: hidden;
   /* overflow-y: scroll; */
 }
+
+a {
+  text-decoration: none;
+  color: var(--gray-850);
+}

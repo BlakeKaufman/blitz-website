@@ -4,10 +4,12 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import DesktopNav from "./components/desktopNav";
 import MobileNav from "./components/mobileNav";
+import HamburgerMenu from "./components/hamburgerMenu";
 
 export default function NavFooterWrapper() {
   const [showNav, setShowNav] = useState(true);
   const [fufilledNavOffset, setFufilledNavOffset] = useState(10);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     if (fufilledNavOffset < 0) {
@@ -51,10 +53,18 @@ export default function NavFooterWrapper() {
             src="/favicon.png"
           />
           <DesktopNav />
-          {/* <MobileNav /> */}
+          <HamburgerMenu setIsActive={setIsActive} isActive={isActive} />
         </div>
       </nav>
-      <div className="container">
+      <MobileNav isActive={isActive} />
+      <div
+        style={{
+          transform: isActive
+            ? `translateY(30px) scale(.95)`
+            : `translateY(0) scale(1)`,
+        }}
+        className="container"
+      >
         <Outlet />
       </div>
 
