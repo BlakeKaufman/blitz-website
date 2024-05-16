@@ -7,33 +7,34 @@
   touch-action: none;
 }
 
-.movableContainer {
-  width: auto;
-  min-height: 600px;
-  max-height: 864px;
-  transform: translateX(5%);
-}
-.movableContainer::-webkit-scrollbar {
+.slideshow-container::-webkit-scrollbar {
   display: none;
 }
 
 .slides {
+  /* width: max-content; */
   width: 100%;
   display: flex;
   height: 100%;
   position: relative;
 
-  /* overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 24px; */
-  /* -ms-overflow-style: none; IE and Edge */
-  /* scrollbar-width: none; Firefox  */
+  min-height: 600px;
+  max-height: 864px;
+  /* transform: translateX(5%); */
+  /* padding-right: 5%; */
+
+  overflow-x: visible;
+  /* scroll-snap-type: x mandato/ry; */
+  /* scroll-padding: 0 24px; */
+  /* -ms-overflow-style: none; */
+  /* scrollbar-width: none; */
 }
 
 .slide {
   /* flex: 0 0 90%; */
   width: 90%;
   height: 100%;
+  margin: 0 5%;
   background-size: cover;
   background-position: center;
   transition: left 1s cubic-bezier(0.4, 0, 0.2, 1),
@@ -44,7 +45,7 @@
   top: 0;
 
   /* background-color: green; */
-  /* scroll-snap-align: start; */
+  scroll-snap-align: center;
 
   display: flex;
   flex-direction: column;

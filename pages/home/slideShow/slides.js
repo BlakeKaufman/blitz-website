@@ -29,4 +29,5 @@ export const slides = [
     callToAction: "Learn more",
     img: visionSlideshow,
   },
+  // {},
 ];
