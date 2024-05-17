@@ -13,22 +13,44 @@ export default function CardsSlider({ cards }) {
           className="card"
         ></li> */}
         {cards.map((card, index) => {
+          console.log(typeof card.gradient);
+
+          if (!card.title)
+            return (
+              <li
+                key={card.length}
+                style={{
+                  left: `${
+                    (cards.length - 1) * 370 + window.innerWidth * 0.1
+                  }px`,
+                  width: window.innerWidth * 0.2,
+                  scrollSnapAlign: "none",
+                  boxShadow: "none",
+                }}
+                className="card "
+              ></li>
+            );
           return (
             <li
+              key={index}
               style={{
-                background: "red",
-                left: `${index * 360 + window.innerWidth * 0.1}px`,
-                backgroundImage: `linear-gradient(to ${
-                  Math.random() === 0 ? "bottom" : "top"
-                } ${Math.random() === 0 ? "right" : "left"}, rgb(${
-                  Math.random() * 255
-                },${Math.random() * 255}, ${Math.random() * 255}), rgb(${
-                  Math.random() * 255
-                },${Math.random() * 255}, ${Math.random() * 255}))`,
+                left: `${index * 370 + window.innerWidth * 0.1}px`,
+                backgroundImage: card.gradient
+                  ? card.gradient
+                  : `linear-gradient(to ${
+                      Math.random() === 0 ? "bottom" : "top"
+                    } ${Math.random() === 0 ? "right" : "left"}, rgb(${
+                      Math.random() * 255
+                    },${Math.random() * 255}, ${Math.random() * 255}), #fff9ff`,
                 marginRight: index === cards.length - 1 ? 470 : 0,
               }}
               className="card"
-            ></li>
+            >
+              <h1>{card.title}</h1>
+              <h2>{card.desc}</h2>
+
+              <button>{card.callToAction}</button>
+            </li>
           );
         })}
       </ul>
