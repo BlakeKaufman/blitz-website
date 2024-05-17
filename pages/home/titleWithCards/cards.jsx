@@ -18,6 +18,14 @@ export default function CardsSlider({ cards }) {
               style={{
                 background: "red",
                 left: `${index * 360 + window.innerWidth * 0.1}px`,
+                backgroundImage: `linear-gradient(to ${
+                  Math.random() === 0 ? "bottom" : "top"
+                } ${Math.random() === 0 ? "right" : "left"}, rgb(${
+                  Math.random() * 255
+                },${Math.random() * 255}, ${Math.random() * 255}), rgb(${
+                  Math.random() * 255
+                },${Math.random() * 255}, ${Math.random() * 255}))`,
+                marginRight: index === cards.length - 1 ? 470 : 0,
               }}
               className="card"
             ></li>
