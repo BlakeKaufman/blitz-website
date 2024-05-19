@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import DesktopNav from "./components/desktopNav";
 import MobileNav from "./components/mobileNav";
 import HamburgerMenu from "./components/hamburgerMenu";
-import Footer from "./components/footer";
+import Footerlist from "./components/footer";
+import FooterCopywriteBar from "./components/footerCopywriteBar";
 
 export default function NavFooterWrapper() {
   const [showNav, setShowNav] = useState(true);
@@ -78,7 +79,8 @@ export default function NavFooterWrapper() {
       </div>
 
       <footer>
-        <Footer />
+        <Footerlist />
+        <FooterCopywriteBar />
       </footer>
     </>
   );

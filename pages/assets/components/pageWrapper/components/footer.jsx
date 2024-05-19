@@ -1,7 +1,7 @@
 import "./footer.css";
 import FooterLists from "./footerComponents/footerLists";
 
-export default function Footer() {
+export default function Footerlist() {
   return (
     <div className="content">
       <div className="column">
