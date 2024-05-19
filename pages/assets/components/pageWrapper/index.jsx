@@ -24,6 +24,10 @@ export default function NavFooterWrapper() {
   useEffect(() => {
     let prevScroll = 0;
     function listenForScroll(e) {
+      if (window.scrollY === 0) {
+        setShowNav(true);
+        return;
+      }
       setFufilledNavOffset((prev) => {
         if (prevScroll < window.scrollY) {
           prevScroll = window.scrollY;
