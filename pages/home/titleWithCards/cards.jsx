@@ -41,7 +41,7 @@ export default function CardsSlider({ cards }) {
                       Math.random() === 0 ? "bottom" : "top"
                     } ${Math.random() === 0 ? "right" : "left"}, rgb(${
                       Math.random() * 255
-                    },${Math.random() * 255}, ${Math.random() * 255}), #fff9ff`,
+                    },${Math.random() * 255}, ${Math.random() * 255}), #0375F6`,
                 marginRight: index === cards.length - 1 ? 470 : 0,
               }}
               className="card"
