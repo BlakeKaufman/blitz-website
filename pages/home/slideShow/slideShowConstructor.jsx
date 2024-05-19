@@ -102,8 +102,8 @@ const Slideshow = ({ slides }) => {
                 color: index === 0 || index === 2 ? "#ffffff" : "#000000",
               }}
               onClick={() => goToSlide(index)}
-              // onMouseEnter={() => setIsHovered(true)}
-              // onMouseLeave={() => setIsHovered(false)}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
               className={`slide ${index === currentIndex ? "active" : ""} ${
                 index - currentIndex === 0 && isHovered ? "hovered" : ""
               }`}
