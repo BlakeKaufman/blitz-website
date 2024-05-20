@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./index.css";
 
-import App from "./home/index.jsx";
-import NavFooterWrapper from "./assets/components/pageWrapper/index.jsx";
+import App from "./pages/home/index.jsx";
+import NavFooterWrapper from "./pages/assets/components/pageWrapper/index.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
