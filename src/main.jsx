@@ -17,12 +17,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NoPage />} /> */}
 
+        <Route path="/terms&polocies/policy" element={<PrivacyPolicyPage />} />
         <Route
-          path="/pages/terms&polocies/policy"
-          element={<PrivacyPolicyPage />}
-        />
-        <Route
-          path="/pages/terms&polocies/terms"
+          path="/terms&polocies/terms"
           element={<TermsAndConditionsPage />}
         />
       </Route>

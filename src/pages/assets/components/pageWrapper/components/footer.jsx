@@ -7,43 +7,43 @@ export default function Footerlist() {
       <div className="column">
         <FooterLists
           listItems={[
-            { href: "pages/blitz", name: "Blitz Wallet" },
-            { href: "pages/blitz/future", name: "The Future" },
-            { href: "pages/blitz/philosophy", name: "Philosophy" },
-            { href: "pages/blitz/technology", name: "Technology" },
+            { href: "/blitz", name: "Blitz Wallet" },
+            { href: "/blitz/future", name: "The Future" },
+            { href: "/blitz/philosophy", name: "Philosophy" },
+            { href: "/blitz/technology", name: "Technology" },
           ]}
         />
         <FooterLists
           listItems={[
-            { href: "pages/latestAdvancements", name: "Latest Advancements" },
-            { href: "pages/latestAdvancements/contacts", name: "Contacts" },
+            { href: "/latestAdvancements", name: "Latest Advancements" },
+            { href: "/latestAdvancements/contacts", name: "Contacts" },
             {
-              href: "pages/latestAdvancements/savingsAccount",
+              href: "/latestAdvancements/savingsAccount",
               name: "Savings account",
             },
-            { href: "pages/latestAdvancements/appStore", name: "Appstore" },
+            { href: "/latestAdvancements/appStore", name: "Appstore" },
           ]}
         />
       </div>
       <div className="column">
         <FooterLists
           listItems={[
-            { href: "pages/safety", name: "Safety" },
-            { href: "pages/safety/Seedphrase", name: "Seedphrase" },
-            { href: "pages/safety/data", name: "Data" },
+            { href: "/safety", name: "Safety" },
+            { href: "/safety/Seedphrase", name: "Seedphrase" },
+            { href: "/safety/data", name: "Data" },
           ]}
         />
       </div>
       <div className="column">
         <FooterLists
           listItems={[
-            { href: "pages/company", name: "Company" },
-            { href: "pages/company/aboutUs", name: "About us" },
-            { href: "pages/company/news", name: "news" },
-            { href: "pages/company/team", name: "team" },
-            { href: "pages/company/sponsors", name: "sponsors" },
+            { href: "/company", name: "Company" },
+            { href: "/company/aboutUs", name: "About us" },
+            { href: "/company/news", name: "news" },
+            { href: "/company/team", name: "team" },
+            { href: "/company/sponsors", name: "sponsors" },
             {
-              href: "pages/company/corporateAccounts",
+              href: "/company/corporateAccounts",
               name: "Corporate accounts",
             },
           ]}
@@ -52,13 +52,13 @@ export default function Footerlist() {
       <div className="column">
         <FooterLists
           listItems={[
-            { href: "pages/terms&polocies", name: "Terms & Policies" },
+            { href: "/terms&polocies", name: "Terms & Policies" },
             {
-              href: "pages/terms&polocies/terms",
+              href: "/terms&polocies/terms",
               name: "Terms and Conditions",
             },
-            { href: "pages/terms&polocies/policy", name: "Privacy policy" },
-            { href: "pages/terms&polocies/license", name: "license" },
+            { href: "/terms&polocies/policy", name: "Privacy policy" },
+            { href: "/terms&polocies/license", name: "license" },
           ]}
         />
       </div>
