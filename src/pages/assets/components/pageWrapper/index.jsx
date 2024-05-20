@@ -57,11 +57,13 @@ export default function NavFooterWrapper() {
     <>
       <nav style={{ top: showNav ? 0 : -60 }}>
         <div className="navContent">
-          <img
-            alt="blitz wallet full text logo"
-            className="logo"
-            src="/favicon.png"
-          />
+          <a href="/">
+            <img
+              alt="blitz wallet full text logo"
+              className="logo"
+              src="/favicon.png"
+            />
+          </a>
           <DesktopNav />
           <HamburgerMenu setIsActive={setIsActive} isActive={isActive} />
         </div>
