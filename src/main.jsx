@@ -6,7 +6,11 @@ import "./index.css";
 
 import App from "./pages/home/index.jsx";
 import NavFooterWrapper from "./pages/assets/components/pageWrapper/index.jsx";
-import { PrivacyPolicyPage, TermsAndConditionsPage } from "./pages/index.js";
+import {
+  LicensePage,
+  PrivacyPolicyPage,
+  TermsAndConditionsPage,
+} from "./pages/index.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -22,6 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/terms&polocies/terms"
           element={<TermsAndConditionsPage />}
         />
+        <Route path="/terms&polocies/license" element={<LicensePage />} />
       </Route>
     </Routes>
   </BrowserRouter>

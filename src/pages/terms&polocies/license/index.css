@@ -1,0 +1,32 @@
+.license {
+  width: 95%;
+  max-width: 1100px;
+
+  margin: 50px auto 250px;
+}
+
+.license .header {
+  font-size: calc(25px + (50 - 25) * ((100vw - 320px) / (1920 - 320)));
+  text-align: left;
+  font-family: var(--title_font);
+}
+
+.license h2 {
+  font-family: var(--title_font);
+  margin-bottom: 20px;
+}
+.license p {
+  font-family: var(--other_font);
+  line-height: 40px;
+  margin-bottom: 50px;
+}
+.license .contentSection:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.license .bld_p {
+  font-weight: bold;
+}
+.license .permission_p {
+  margin-bottom: 30px;
+}
