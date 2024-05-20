@@ -6,6 +6,7 @@ import "./index.css";
 
 import App from "./pages/home/index.jsx";
 import NavFooterWrapper from "./pages/assets/components/pageWrapper/index.jsx";
+import PrivacyPolicyPage from "./pages/terms&polocies/policy/index.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -15,6 +16,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         {/* <Route path="blogs" element={<Blogs />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NoPage />} /> */}
+
+        <Route
+          path="/pages/terms&polocies/policy"
+          element={<PrivacyPolicyPage />}
+        />
       </Route>
     </Routes>
   </BrowserRouter>
