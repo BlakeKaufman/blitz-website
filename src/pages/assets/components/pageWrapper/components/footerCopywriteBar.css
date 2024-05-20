@@ -8,3 +8,18 @@ footer .copywriteBar {
 footer .copywriteBar p {
   font-size: 18px;
 }
+
+footer .copywriteBar .socials {
+  display: flex;
+}
+
+footer .copywriteBar .socials .socialIcon {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+footer .copywriteBar .socials .socialIcon img {
+  width: 100%;
+  height: 100%;
+}
